@@ -7,7 +7,7 @@
     <title>Go WebSocket Tutorial</title>
   </head>
   <body>
-    <p>Testing1</p>
+    <p>Client 2</p>
 
     <script>
       let socket = new WebSocket("ws://127.0.0.1:8010/ws");
@@ -15,7 +15,7 @@
 
       socket.onopen = () => {
         console.log("Successfully Connected");
-        socket.send("Nice to meet you");
+        socket.send("Hello From Client 2");
       };
 
       socket.onclose = (event) => {
