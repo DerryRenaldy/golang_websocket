@@ -42,12 +42,6 @@
   margin-left: 20px;
   color: #000000;
 }
-
-.sentNotify2 {
-  margin-left: 20px;
-  color: #000000;
-}
-
 .receiveNotify {
   margin-left: 20px;
   color: #000000;
@@ -56,11 +50,6 @@
 .sentNotify em {
   color: #0db55a;
 }
-
-.sentNotify2 em {
-  color: #0d42b5;
-}
-
 .receiveNotify em {
   color: #766aff;
 }

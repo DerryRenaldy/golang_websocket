@@ -9,7 +9,7 @@
     <h1
       style="background-color: #ffffff; justify-content: center; display: flex"
     >
-      Simple WebSocket client
+      Simple WebSocket client 1
     </h1>
 
     <div id="root" class="row">
@@ -31,28 +31,89 @@
         <p id="sts"><b>Connection Status :</b></p>
         <p id="wsStatus" style="color: #065256"><b>Connecting...</b></p>
       </div>
-      <div
-        id="sendmsgcolumn"
-        class="column"
-        style="padding-left: 10px; position: sticky; top: 0"
+    </div>
+    <!-- send message column -->
+    <!-- CLIENT 1 -->
+    <div
+      id="sendmsgcolumn"
+      class="column"
+      style="padding-left: 10px; position: sticky; top: 0"
+    >
+      <form
+        action=""
+        class="w3-container"
+        onkeydown="return event.key != 'Enter';"
+        style="background-color: rgb(247, 231, 255); padding: 10px"
       >
-        <form
-          action=""
-          class="w3-container"
-          onkeydown="return event.key != 'Enter';"
-          style="background-color: rgb(247, 231, 255); padding: 10px"
+        <label for="tosndmsg">Message to send from client 1</label>
+        <input
+          class="w3-input"
+          type="text"
+          id="tosndmsg"
+          name="msgtosnd"
+        /><br /><br />
+        <button
+          type="button"
+          class="button"
+          onclick="handleinputmessage1()"
+          style="margin: 15rm"
         >
-          <label for="tosndmsg">Message to send</label>
-          <input
-            class="w3-input"
-            type="text"
-            id="tosndmsg"
-            name="msgtosnd"
-          /><br /><br />
-          <button type="button" class="button" onclick="handleinputmessage()">
-            Send
-          </button>
-        </form>
+          Send
+        </button>
+        <button
+          type="button"
+          class="button"
+          onclick="handledeleteinputmessage()"
+          style="margin: 15rm"
+        >
+          Delete History
+        </button>
+      </form>
+    </div>
+
+    <!-- send message column -->
+    <!-- CLIENT 2 -->
+    <div
+      id="sendmsgcolumn"
+      class="column"
+      style="padding-left: 10px; position: sticky; top: 0"
+    >
+      <form
+        action=""
+        class="w3-container"
+        onkeydown="return event.key != 'Enter';"
+        style="background-color: rgb(247, 231, 255); padding: 10px"
+      >
+        <label for="tosndmsg">Message to send from client 2</label>
+        <input
+          class="w3-input"
+          type="text"
+          id="tosndmsg2"
+          name="msgtosnd"
+        /><br /><br />
+        <button
+          type="button"
+          class="button"
+          onclick="handleinputmessage2()"
+          style="margin: 15rm"
+        >
+          Send
+        </button>
+        <button
+          type="button"
+          class="button"
+          onclick="handledeleteinputmessage()"
+          style="margin: 15rm"
+        >
+          Delete History
+        </button>
+      </form>
+    </div>
+    <div class="message-appear" style="margin: 12px">
+      <p>Your Chat Appear Here...</p>
+      <div class="parent">
+        <div id="msg-box"></div>
+        <div id="receive-box"></div>
       </div>
     </div>
     <script src="index.js"></script>

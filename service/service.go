@@ -8,6 +8,14 @@ import (
 	"github.com/gorilla/websocket"
 )
 
+func init() {
+	const (
+		HHMMSS12h = "3:04:05 PM"
+	)
+	log.SetFlags(log.Lshortfile)
+	log.SetPrefix(time.Now().UTC().Format(HHMMSS12h) + ": ")
+}
+
 func ReadAndEcho(ws *websocket.Conn) {
 	for {
 		msgType, msg, err := ws.ReadMessage()
