@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.p-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.sentNotify {
+  margin-left: 20px;
+  color: #000000;
+}
+.receiveNotify {
+  margin-left: 20px;
+  color: #000000;
+}
+
+.sentNotify em {
+  color: #0db55a;
+}
+.receiveNotify em {
+  color: #766aff;
+}
+
+p {
+  font-size: 18px;
+}
